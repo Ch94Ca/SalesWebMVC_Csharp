@@ -8,17 +8,15 @@ namespace SalesWebMVC.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int MyProperty { get; set; }
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
     
         public Department()
         {
         }
-        public Department(int id, string name, int myProperty)
+        public Department(int id, string name)
         {
             Id = id;
             Name = name;
-            MyProperty = myProperty;
         }
 
         public void AddSeller(Seller sl)
